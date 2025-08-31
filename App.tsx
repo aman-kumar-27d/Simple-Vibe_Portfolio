@@ -22,6 +22,19 @@ const App: React.FC = () => {
   const cursorFollowerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const themeInterval = setInterval(() => {
+      setTheme(currentTheme => {
+        const currentIndex = THEMES.findIndex(t => t.name === currentTheme.name);
+        const nextIndex = (currentIndex + 1) % THEMES.length;
+        return THEMES[nextIndex];
+      });
+    }, 5000);
+
+    return () => clearInterval(themeInterval);
+  }, []);
+
+
+  useEffect(() => {
     const root = document.documentElement;
     root.style.setProperty('--background', theme.colors.background);
     root.style.setProperty('--text', theme.colors.text);

@@ -5,9 +5,9 @@ export const Skills: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (typeof window !== 'undefined' && 'gsap' in window && 'ScrollTrigger' in window && sectionRef.current) {
+        if (typeof window !== 'undefined' && 'gsap' in window && 'ScrollTrigger'in window && sectionRef.current) {
             const { gsap } = window as any;
-            gsap.from(sectionRef.current.querySelectorAll('.skill-card'), {
+            gsap.from(sectionRef.current.querySelectorAll('.skill-item'), {
                 scrollTrigger: {
                     trigger: sectionRef.current,
                     start: 'top 80%',
@@ -24,17 +24,27 @@ export const Skills: React.FC = () => {
 
     return (
         <section id="skills" ref={sectionRef} className="py-20 md:py-32">
-            <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">
-                My Tech Stack<span className="text-[var(--primary)]">.</span>
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
-                {SKILLS.map(({ name, Icon }) => (
-                    <div key={name} className="skill-card group flex flex-col items-center justify-center p-6 bg-[var(--card)] rounded-lg border border-[var(--border)] shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-[var(--primary)]/20 hover:shadow-2xl">
-                        <Icon className="w-12 h-12 mb-4 text-[var(--primary-light)] transition-transform duration-300 group-hover:scale-110" />
-                        <span className="font-medium text-center">{name}</span>
+            <div className="flex flex-row flex-wrap justify-center items-center gap-x-10 gap-y-12 md:gap-x-16 mb-24">
+                {SKILLS.map(({ name, Icon }, index) => (
+                    <div key={name} className="skill-item group flex flex-col items-center text-center w-24 transition-transform duration-300 hover:-translate-y-2">
+                        <div className="relative w-16 h-16 flex items-center justify-center">
+                            <div 
+                                className="absolute inset-0 rounded-full blur-xl"
+                                style={{
+                                    backgroundColor: 'var(--primary)',
+                                    animation: `pulse-glow 4s ease-in-out infinite`,
+                                    animationDelay: `${index * 150}ms`,
+                                }}
+                            ></div>
+                            <Icon className="relative z-10 w-16 h-16 text-slate-300 transition-all duration-300 group-hover:text-[var(--primary-light)] group-hover:drop-shadow-[0_0_8px_var(--primary)]" />
+                        </div>
+                        <span className="mt-4 font-medium text-sm text-slate-400 group-hover:text-[var(--text)] transition-colors">{name}</span>
                     </div>
                 ))}
             </div>
+            <h2 className="text-3xl md:text-4xl font-black tracking-[0.3em] uppercase text-center text-slate-500">
+                MY TECH STACK
+            </h2>
         </section>
     );
 };

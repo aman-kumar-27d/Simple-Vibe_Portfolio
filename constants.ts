@@ -71,17 +71,17 @@ export const THEMES: Theme[] = [
       border: '#334155',
     }
   },
-  {
-    name: 'light-blue',
-    colors: {
-      background: '#f1f5f9',
-      text: '#0f172a',
-      primary: '#2563eb', // blue-600
-      primaryLight: '#60a5fa', // blue-400
-      card: '#ffffff',
-      border: '#cbd5e1',
-    }
-  },
+  // {
+  //   name: 'light-blue',
+  //   colors: {
+  //     background: '#f1f5f9',
+  //     text: '#0f172a',
+  //     primary: '#2563eb', // blue-600
+  //     primaryLight: '#60a5fa', // blue-400
+  //     card: '#ffffff',
+  //     border: '#cbd5e1',
+  //   }
+  // },
     {
     name: 'forest-green',
     colors: {

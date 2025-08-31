@@ -56,8 +56,8 @@ export const Contact: React.FC = () => {
       </div>
 
       <div className="flex justify-center items-center space-x-6 mt-16">
-        <a href="https://github.com/aman-kumar-27d" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-slate-400 hover:text-[var(--primary)] transition-colors"><GithubIcon className="w-8 h-8" /></a>
-        <a href="https://www.linkedin.com/in/aman-kumar-27d" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-slate-400 hover:text-[var(--primary)] transition-colors"><LinkedinIcon className="w-8 h-8" /></a>
+        <a href="https://github.com/aman-kumar-27d" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile" className="text-slate-400 hover:text-[var(--primary)] transition-colors"><GithubIcon className="w-8 h-8" /></a>
+        <a href="https://www.linkedin.com/in/aman-kumar-27d" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile" className="text-slate-400 hover:text-[var(--primary)] transition-colors"><LinkedinIcon className="w-8 h-8" /></a>
       </div>
     </section>
   );
