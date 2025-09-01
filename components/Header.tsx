@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { ThemeContext } from '../App';
-import { THEMES } from '../constants';
-import type { Theme } from '../types';
+
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
