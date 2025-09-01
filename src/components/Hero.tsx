@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
 
 export const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
-    if (heroRef.current) {
+    if (typeof window !== 'undefined' && 'gsap' in window && heroRef.current) {
+      const { gsap } = window as any;
       const timeline = gsap.timeline({ defaults: { ease: 'power3.out' }});
 
       timeline.fromTo(

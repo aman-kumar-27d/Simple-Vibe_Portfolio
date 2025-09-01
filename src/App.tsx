@@ -15,7 +15,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export const ThemeContext = React.createContext({
   theme: THEMES[0],
-  setTheme: (theme: Theme) => {},
+  setTheme: (_: Theme) => {},
 });
 
 const App: React.FC = () => {

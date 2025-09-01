@@ -1,13 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { EXPERIENCES } from '../constants';
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 
 export const Experience: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
     const timelineRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (sectionRef.current) {
+        if (typeof window !== 'undefined' && 'gsap' in window && 'ScrollTrigger' in window && sectionRef.current) {
+            const { gsap } = window as any;
             const items = sectionRef.current.querySelectorAll('.timeline-item');
             
             gsap.from(timelineRef.current, {

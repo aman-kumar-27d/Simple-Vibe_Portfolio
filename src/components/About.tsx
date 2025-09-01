@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 
 export const About: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        if (sectionRef.current) {
+        if (typeof window !== 'undefined' && 'gsap' in window && 'ScrollTrigger' in window && sectionRef.current) {
+            const { gsap } = window as any;
             gsap.from(sectionRef.current.children, {
                 scrollTrigger: {
                     trigger: sectionRef.current,
