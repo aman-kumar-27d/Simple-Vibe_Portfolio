@@ -38,7 +38,9 @@ export const Hero: React.FC = () => {
           <span className="font-bold text-[var(--text)] mx-2">AI/ML Engineer</span> &
           <span className="font-bold text-[var(--text)] mx-2">Full-Stack Developer</span>
           <br />
-          I build innovative and user-centric AI/ML solutions.
+          <p className="text-xl text-muted-foreground mb-8 max-w-md">
+          I build innovative and user-centric solutions with modern technologies and clean code.
+          </p>
         </div>
         <div className="hero-line mt-8 flex flex-col sm:flex-row items-center gap-4">
             <a href="#projects" onClick={(e) => handleScrollTo(e, 'projects')} className="w-full sm:w-auto text-center px-8 py-4 bg-[var(--primary)] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
