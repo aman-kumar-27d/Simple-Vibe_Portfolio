@@ -44,10 +44,10 @@ export const Contact: React.FC = () => {
               <textarea id="message" name="message" rows={5} required className="w-full bg-[var(--card)] border border-[var(--border)] rounded-md p-3 focus:ring-1 focus:ring-[var(--primary)] focus:border-[var(--primary)] outline-none transition"></textarea>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-               <button type="submit" disabled={status === 'submitting'} className="w-full sm:w-auto px-8 py-3 bg-[var(--primary)] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">
+              <button type="submit" disabled={status === 'submitting'} className="w-full sm:w-auto px-8 py-3 bg-[var(--primary)] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">
                 {status === 'submitting' ? 'Sending...' : 'Send Message'}
               </button>
-               <a href="/resume.pdf" download="AmanKumar_Resume.pdf" className="w-full sm:w-auto text-center px-8 py-3 bg-transparent border-2 border-[var(--primary)] text-[var(--primary)] font-semibold rounded-lg hover:bg-[var(--primary)] hover:text-[var(--background)] transition-colors duration-300">
+              <a href="/resume.pdf" download="AmanKumar_Resume.pdf" className="w-full sm:w-auto text-center px-8 py-3 bg-transparent border-2 border-[var(--primary)] text-[var(--primary)] font-semibold rounded-lg hover:bg-[var(--primary)] hover:text-[var(--background)] transition-colors duration-300">
                 Download Resume
               </a>
             </div>

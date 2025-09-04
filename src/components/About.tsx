@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-// import { gsap } from 'gsap';
 
 export const About: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);

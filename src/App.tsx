@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { WhatIDo } from './components/WhatIDo';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Experience } from './components/Experience';
@@ -95,6 +96,7 @@ const App: React.FC = () => {
         <main className="container mx-auto px-6 md:px-12">
           <Hero />
           <About />
+          <WhatIDo />
           <Skills />
           <Experience />
           <Projects />
