@@ -32,12 +32,13 @@ export const About: React.FC = () => {
                         <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--primary)] to-[var(--primary-light)] rounded-lg blur opacity-50 group-hover:opacity-100 transition duration-300"></div>
                         <img 
                             src="/assets/profile-image.jpg"
-                            alt="Aman Kumar" 
+                            alt="Aman Kumar"
+                            data-cursor="disable" 
                             className="relative rounded-lg shadow-2xl w-full aspect-square object-cover"
                         />
                     </div>
                 </div>
-                <div className="md:col-span-3 text-slate-300 text-lg leading-relaxed space-y-4">
+                <div data-cursor="disable" className="md:col-span-3 text-slate-300 text-lg leading-relaxed space-y-4">
                     <p>
                         A driven final-year B.Tech student in Computer Science & Engineering, specializing in Artificial Intelligence & Machine Learning, with a strong passion for full-stack software development.
                     </p>

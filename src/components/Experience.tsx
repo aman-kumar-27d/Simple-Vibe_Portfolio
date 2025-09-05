@@ -73,7 +73,7 @@ export const Experience: React.FC = () => {
     }, []);
 
     return (
-        <div className="career-section section-container max-w-4xl" ref={sectionRef}>
+        <div id="experience" className="career-section section-container max-w-4xl" ref={sectionRef}>
             <div className="career-container">
                 <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
                     My Career & Experience<span className="text-[var(--primary)]">.</span>
@@ -91,7 +91,7 @@ export const Experience: React.FC = () => {
                                 </div>
                                 <h3>{exp.period}</h3>
                             </div>
-                            <p className="mt-4 md:mt-0 text-slate-300">
+                            <p data-cursor="disable" className="mt-4 md:mt-0 text-slate-300">
                                 {exp.description}
                             </p>
                         </div>

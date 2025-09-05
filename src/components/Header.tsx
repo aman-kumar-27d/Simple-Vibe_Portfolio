@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import HoverLinks from './Utils/HoverLinks';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,7 +43,7 @@ export const Header: React.FC = () => {
               onClick={(e) => handleNavClick(e, link.toLowerCase())}
               className="text-sm font-medium hover:text-[var(--primary)] transition-colors duration-200"
             >
-              {link}
+              <HoverLinks text={link}/>
             </a>
           ))}
         </nav>

@@ -27,7 +27,7 @@ export const Skills: React.FC = () => {
         <section id="skills" ref={sectionRef} className="py-20 md:py-32">
             <div className="flex flex-row flex-wrap justify-center items-center gap-x-10 gap-y-12 md:gap-x-16 mb-24">
                 {SKILLS.map(({ name, Icon }, index) => (
-                    <div key={name} className="skill-item group flex flex-col items-center text-center w-24 transition-transform duration-300 hover:-translate-y-2">
+                    <div key={name} data-cursor="disable" className="skill-item group flex flex-col items-center text-center w-24 transition-transform duration-300 hover:-translate-y-2">
                         <div className="relative w-16 h-16 flex items-center justify-center">
                             <div 
                                 className="absolute inset-0 rounded-full blur-xl"

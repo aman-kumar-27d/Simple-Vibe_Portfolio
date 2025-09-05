@@ -17,6 +17,7 @@ export const WhatIDo: React.FC = () => {
             {services.map((service, index) => (
               <div 
                 key={index}
+                data-cursor="disable"
                 className="bg-white/10 backdrop-blur-[50px] border border-white/10 p-8 rounded-lg hover:scale-105 transition-all duration-300 group"
               >
                 <div className="flex items-start space-x-4">

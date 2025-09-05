@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -12,17 +12,16 @@ import { THEMES } from './constants';
 import type { Theme } from './types';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Cursor from './components/Utils/Cursor';
 
 
 export const ThemeContext = React.createContext({
   theme: THEMES[0],
-  setTheme: (_: Theme) => {},
+  setTheme: (_: Theme) => { },
 });
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<Theme>(THEMES[0]);
-  const cursorRef = useRef<HTMLDivElement>(null);
-  const cursorFollowerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -49,49 +48,25 @@ const App: React.FC = () => {
     root.style.setProperty('--primary-light', theme.colors.primaryLight);
     root.style.setProperty('--card', theme.colors.card);
     root.style.setProperty('--border', theme.colors.border);
-    
+
     if (theme.name.includes('light')) {
-        root.classList.remove('dark');
+      root.classList.remove('dark');
     } else {
-        root.classList.add('dark');
+      root.classList.add('dark');
     }
   }, [theme]);
 
   useEffect(() => {
-    const moveCursor = (e: MouseEvent) => {
-      gsap.to(cursorRef.current, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.1,
-        ease: 'power2.out',
-      });
-      gsap.to(cursorFollowerRef.current, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.4,
-        ease: 'power2.out',
-      });
-    };
-    
-    window.addEventListener('mousemove', moveCursor);
-
-    return () => {
-      window.removeEventListener('mousemove', moveCursor);
-    };
+    document.querySelectorAll('a').forEach(anchor => {
+      anchor.setAttribute('data-cursor', 'disable');
+    });
   }, []);
+
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className="bg-[var(--background)] text-[var(--text)] font-sans transition-colors duration-300 ease-in-out">
-        <div 
-            ref={cursorRef} 
-            className="hidden lg:block w-3 h-3 bg-[var(--primary)] rounded-full fixed top-0 left-0 z-50 pointer-events-none -translate-x-1/2 -translate-y-1/2"
-        ></div>
-        <div 
-            ref={cursorFollowerRef} 
-            className="hidden lg:block w-12 h-12 bg-[var(--primary)] rounded-full fixed top-0 left-0 z-40 pointer-events-none -translate-x-1/2 -translate-y-1/2 opacity-10 blur-xl"
-        ></div>
-        
+        <Cursor />
         <Header />
         <main className="container mx-auto px-6 md:px-12">
           <Hero />

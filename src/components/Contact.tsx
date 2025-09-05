@@ -15,7 +15,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32">
+    <section id="contact" data-cursor="disable" className="py-20 md:py-32">
       <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center">
         Get In Touch<span className="text-[var(--primary)]">.</span>
       </h2>

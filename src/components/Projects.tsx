@@ -30,7 +30,7 @@ export const Projects: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {PROJECTS.map((project, index) => (
-                    <div key={index} className="project-card bg-[var(--card)] p-8 rounded-lg border border-[var(--border)] flex flex-col hover:border-[var(--primary)] transition-colors duration-300 md:col-span-1 lg:col-span-1">
+                    <div key={index} data-cursor="disable" className="project-card bg-[var(--card)] p-8 rounded-lg border border-[var(--border)] flex flex-col hover:border-[var(--primary)] transition-colors duration-300 md:col-span-1 lg:col-span-1">
                         <div className="flex-grow">
                             <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
                             <p className="text-slate-400 mb-6">{project.description}</p>
