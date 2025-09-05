@@ -31,7 +31,7 @@ export const About: React.FC = () => {
                     <div className="relative transform transition-transform duration-500 ease-in-out group-hover:scale-105">
                         <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--primary)] to-[var(--primary-light)] rounded-lg blur opacity-50 group-hover:opacity-100 transition duration-300"></div>
                         <img 
-                            src="/assets/profile-image.jpg"
+                            src="/assets/profile-image.webp"
                             alt="Aman Kumar"
                             data-cursor="disable" 
                             className="relative rounded-lg shadow-2xl w-full aspect-square object-cover"

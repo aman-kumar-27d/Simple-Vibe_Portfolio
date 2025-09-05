@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -12,7 +56,7 @@ html {
     transform: scale(0.95);
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.8;
     transform: scale(1.15);
   }
 }
@@ -112,4 +156,4 @@ html {
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
-}  
+}
