@@ -31,6 +31,7 @@ export const Header: React.FC = () => {
         <a
           href="#"
           aria-label="Aman Kumar - Home"
+          data-cursor='disable'
           className="text-xl md:text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-light)] to-[var(--primary)]"
         >
           Aman Kumar

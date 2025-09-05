@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { WhatIDo } from './components/WhatIDo';
-import { Skills } from './components/Skills';
-import { Projects } from './components/Projects';
-import { Experience } from './components/Experience';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
 import { THEMES } from './constants';
 import type { Theme } from './types';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Cursor from './components/Utils/Cursor';
 
+const About = lazy(() => import('./components/About').then(module => ({ default: module.About })));
+const WhatIDo = lazy(() => import('./components/WhatIDo').then(module => ({ default: module.WhatIDo })));
+const Skills = lazy(() => import('./components/Skills').then(module => ({ default: module.Skills })));
+const Projects = lazy(() => import('./components/Projects').then(module => ({ default: module.Projects })));
+const Experience = lazy(() => import('./components/Experience').then(module => ({ default: module.Experience })));
+const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })));
+const Footer = lazy(() => import('./components/Footer').then(module => ({ default: module.Footer })));
 
 export const ThemeContext = React.createContext({
   theme: THEMES[0],
@@ -56,13 +56,6 @@ const App: React.FC = () => {
     }
   }, [theme]);
 
-  useEffect(() => {
-    document.querySelectorAll('a').forEach(anchor => {
-      anchor.setAttribute('data-cursor', 'disable');
-    });
-  }, []);
-
-
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className="bg-[var(--background)] text-[var(--text)] font-sans transition-colors duration-300 ease-in-out">
@@ -70,14 +63,18 @@ const App: React.FC = () => {
         <Header />
         <main className="container mx-auto px-6 md:px-12">
           <Hero />
-          <About />
-          <WhatIDo />
-          <Skills />
-          <Experience />
-          <Projects />
-          <Contact />
+          <Suspense fallback={<div className="text-center p-12">Loading...</div>}>
+            <About />
+            <WhatIDo />
+            <Skills />
+            <Experience />
+            <Projects />
+            <Contact />
+          </Suspense>
         </main>
-        <Footer />
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </div>
     </ThemeContext.Provider>
   );
