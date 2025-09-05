@@ -26,8 +26,8 @@ export const Hero: React.FC = () => {
 
   return (
     <section ref={heroRef} className="min-h-screen flex flex-col justify-center items-start text-left">
-      <div className="w-full">
-        <h1 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter mb-4">
+      <div className="w-full animate-slide-up">
+        <h1 className=" text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter mb-4">
           <div className="hero-line block overflow-hidden">Hello! I'm</div>
           <div className="hero-line block overflow-hidden text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-light)] to-[var(--primary)]">
             Aman Kumar
@@ -43,10 +43,10 @@ export const Hero: React.FC = () => {
           </p>
         </div>
         <div className="hero-line mt-8 flex flex-col sm:flex-row items-center gap-4">
-            <a href="#projects" onClick={(e) => handleScrollTo(e, 'projects')} className="w-full sm:w-auto text-center px-8 py-4 bg-[var(--primary)] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
+            <a href="#projects" onClick={(e) => handleScrollTo(e, 'projects')} className="animate-glow w-full sm:w-auto text-center px-8 py-4 bg-[var(--primary)] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
                 View My Work
             </a>
-            <a href="#contact" onClick={(e) => handleScrollTo(e, 'contact')} className="w-full sm:w-auto text-center px-8 py-4 border-2 border-[var(--primary)] text-[var(--primary)] font-semibold rounded-lg hover:bg-[var(--primary)] hover:text-white transition-colors duration-300">
+            <a href="#contact" onClick={(e) => handleScrollTo(e, 'contact')} className="animate-float w-full sm:w-auto text-center px-8 py-4 border-2 border-[var(--primary)] text-[var(--primary)] font-semibold rounded-lg hover:bg-[var(--primary)] hover:text-white transition-colors duration-300">
                 Get In Touch
             </a>
         </div>
