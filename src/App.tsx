@@ -15,6 +15,8 @@ const Experience = lazy(() => import('./components/Experience').then(module => (
 const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })));
 const Footer = lazy(() => import('./components/Footer').then(module => ({ default: module.Footer })));
 const Certifications = lazy(() => import('./components/Certifications').then(module => ({ default: module.default })));
+const ToolsIUse = lazy(() => import('./components/ToolsIUse').then(module => ({ default: module.default })));
+
 export const ThemeContext = React.createContext({
   theme: THEMES[0],
   setTheme: (_: Theme) => { },
@@ -68,6 +70,7 @@ const App: React.FC = () => {
             <WhatIDo />
             <Experience />
             <Projects />
+            <ToolsIUse />
             <Skills />
             <Certifications />
             <Contact />

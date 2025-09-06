@@ -14,35 +14,39 @@ const Certifications = () => {
   }, []);
 
   return (
-    <section id="certifications" className="py-16 sm:py-20 text-center">
-      <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-slate-900 dark:text-slate-50">
-        Certifications & Badges
+    <section
+      id="certifications"
+      className="hidden py-16 text-center sm:py-20 md:block"
+    >
+      <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-50 sm:text-4xl mb-12">
+        Certifications & Badges<span className="text-[var(--primary)]">.</span>
       </h2>
-      <div className="flex flex-wrap justify-center items-center gap-8 max-w-6xl mx-auto">
+      <div data-cursor="disable" className="flex flex-wrap justify-center items-center gap-8 max-w-6xl mx-auto">
         {CERTIFICATIONS.map((cert) => {
           if (cert.credlyId) {
             return (
-              <div
-                key={cert.credlyId}
-                className="flex-shrink-0"
-                data-iframe-width="150"
-                data-iframe-height="270"
-                data-share-badge-id={cert.credlyId}
-                data-share-badge-host="https://www.credly.com"
-              ></div>
+              <div>
+                <div
+                  key={cert.credlyId}
+                  className="flex-shrink-0"
+                  data-iframe-width="150"
+                  data-iframe-height="270"
+                  data-share-badge-id={cert.credlyId}
+                  data-share-badge-host="https://www.credly.com"
+                  data-theme="dark"
+                ></div>
+              </div>
             );
           }
           if (cert.openBadgeSrc) {
             return (
-              <iframe
-                key={cert.openBadgeSrc}
-                className="flex-shrink-0"
-                frameBorder="0"
-                scrolling="no"
-                src={cert.openBadgeSrc}
-                width="200"
-                height="270"
-              ></iframe>
+              <div className="relative w-[200px] h-[270px] overflow-hidden">
+                <iframe
+                  key={cert.openBadgeSrc}
+                  className="absolute top-0 left-0 w-[calc(100%+17px)] h-full border-none"
+                  src={cert.openBadgeSrc}
+                ></iframe>
+              </div>
             );
           }
           return null;

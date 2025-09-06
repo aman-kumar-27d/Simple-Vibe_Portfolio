@@ -44,35 +44,30 @@ export const services = [
 
 export const PROJECTS: Project[] = [
   {
+    title: 'Portfolio Website',
+    description: 'Developed a personal portfolio website to showcase projects and skills, utilizing React, Tailwind CSS, and Vite for a modern and responsive design.',
+    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'GSAP', 'React Icons','Agentic-ai'],
+    githubUrl: 'https://github.com/aman-kumar-27d/Simple-Vibe_Portfolio',
+  },
+  {
     title: 'AI-powered Resume Screening & Ranking System',
     description: 'Developed an AI-powered resume screening system using NLP and Scikit-learn, automating evaluations to cut screening time by 70% and increase role-matching accuracy by 90%.',
-    tags: ['Python', 'Scikit-learn', 'NLTK', 'NLP'],
-    githubUrl: 'https://github.com/aman-kumar-27d',
+    tags: ['Python', 'Scikit-learn', 'NLTK', 'NLP','Pandas', 'jupyter notebook','PyPDF2','resume-parser'],
+    githubUrl: 'https://github.com/aman-kumar-27d/AI-powered-Resume-Screening-and-Ranking-System',
+  },
+  {
+    title: 'Secure Notepad Assessment Platform',
+    description: 'Developed a streamlined student assessment management system for transparent grading and real-time dispute resolution, reducing organizational workload by 40%.',
+    tags: ['React', 'MongoDB', 'SaaS' ,'Express.js', 'REST API', 'JWT', 'Docker', 'mongoose', 'javascript', 'TypeScript'],
+    githubUrl: 'https://github.com/aman-kumar-27d/AssesmentMannagement',
   },
   {
     title: 'URL Shortener Application',
     description: 'Independently developed a backend URL shortener service using Express.js and MongoDB, emphasizing RESTful API design, secure data handling, and efficient database operations.',
-    tags: ['Node.js', 'Express.js', 'MongoDB', 'REST API'],
-    githubUrl: 'https://github.com/aman-kumar-27d',
+    tags: ['Node.js', 'Express.js', 'MongoDB', 'REST API','JavaScript', 'TypeScript', 'Postman', 'mongoose','docker'],
+    githubUrl: 'https://github.com/aman-kumar-27d/URL-shortener',
   },
-  {
-    title: 'Secure Notepad Assessment Platform',
-    description: 'Developed a streamlined student assessment management system for transparent grading and real-time dispute resolution, reducing organizational workload by 40%.',
-    tags: ['React', 'Node.js', 'MongoDB', 'SaaS'],
-    githubUrl: 'https://github.com/aman-kumar-27d',
-  },
-  {
-    title: 'Secure Notepad Assessment Platform',
-    description: 'Developed a streamlined student assessment management system for transparent grading and real-time dispute resolution, reducing organizational workload by 40%.',
-    tags: ['React', 'Node.js', 'MongoDB', 'SaaS'],
-    githubUrl: 'https://github.com/aman-kumar-27d',
-  },
-  {
-    title: 'Secure Notepad Assessment Platform',
-    description: 'Developed a streamlined student assessment management system for transparent grading and real-time dispute resolution, reducing organizational workload by 40%.',
-    tags: ['React', 'Node.js', 'MongoDB', 'SaaS'],
-    githubUrl: 'https://github.com/aman-kumar-27d',
-  },
+  
 ];
 
 export const EXPERIENCES: Experience[] = [
