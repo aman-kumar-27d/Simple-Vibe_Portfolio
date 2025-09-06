@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { SKILLS } from '../constants';
-// import { gsap } from 'gsap';
 
 export const Skills: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -46,6 +45,7 @@ export const Skills: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-black tracking-[0.3em] uppercase text-center text-slate-500">
                 MY TECH STACK
             </h2>
+            
         </section>
     );
 };

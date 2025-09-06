@@ -32,13 +32,13 @@ export const SKILLS = [
 export const services = [
     {
       title: 'Full-Stack Developer',
-      description: 'I build end-to-end web applications using modern frameworks like React, Node.js, and databases to create seamless user experiences.',
+      description: 'Crafting responsive web apps using React + Vite, styled with Tailwind, and powered by FastAPI, Express.js, and MongoDB. Focused on clean UI, secure APIs, and cloud-ready deployment.',
       icon: '💻',
     },
     {
-      title: 'Software Engineer',
-      description: 'I design and develop scalable software solutions, focusing on clean architecture, efficient algorithms, and maintainable code.',
-      icon: '⚙️',
+      title: 'Machine Learning Engineer (Generative AI Focus)',
+      description: 'Building intelligent systems with generative models, handling data pipelines, model training, and deployment using TensorFlow, Scikit-learn, and FastAPI on cloud platforms.',
+      icon: '🤖',
     },
   ];
 
@@ -53,6 +53,18 @@ export const PROJECTS: Project[] = [
     title: 'URL Shortener Application',
     description: 'Independently developed a backend URL shortener service using Express.js and MongoDB, emphasizing RESTful API design, secure data handling, and efficient database operations.',
     tags: ['Node.js', 'Express.js', 'MongoDB', 'REST API'],
+    githubUrl: 'https://github.com/aman-kumar-27d',
+  },
+  {
+    title: 'Secure Notepad Assessment Platform',
+    description: 'Developed a streamlined student assessment management system for transparent grading and real-time dispute resolution, reducing organizational workload by 40%.',
+    tags: ['React', 'Node.js', 'MongoDB', 'SaaS'],
+    githubUrl: 'https://github.com/aman-kumar-27d',
+  },
+  {
+    title: 'Secure Notepad Assessment Platform',
+    description: 'Developed a streamlined student assessment management system for transparent grading and real-time dispute resolution, reducing organizational workload by 40%.',
+    tags: ['React', 'Node.js', 'MongoDB', 'SaaS'],
     githubUrl: 'https://github.com/aman-kumar-27d',
   },
   {
@@ -119,4 +131,46 @@ export const THEMES: Theme[] = [
       border: '#44403c',
     }
   }
+];
+
+export const CERTIFICATIONS: { credlyId?: string; openBadgeSrc?: string }[] = [
+  {
+    credlyId: "d4e090f7-0334-49bb-ab6e-71abd9b441ce", 
+  },
+  {
+    credlyId: "7a3c15f5-309b-4917-bf5f-44ec394a85e6", 
+  },
+  {
+    credlyId: "95c6d9ca-87e3-4724-a268-0246027f8a17", 
+  },
+  {
+    credlyId: "7effc91d-b7b7-454e-bce2-1728b951ab56", 
+  },
+  {
+    credlyId: "36cb5eb2-9d29-4842-9d9f-a7bbfd57b7ba", 
+  },
+  {
+    credlyId: "52f58065-9f89-4b4e-abf5-b3481bca3708", 
+  },
+  // {
+  //   credlyId: "7702be31-11b2-4132-b937-9b25f410bf0b", 
+  // },
+  {
+    openBadgeSrc: "https://openbadgepassport.com/app/badge/info/982573/pic/embed",//Machine Learning Master
+  },
+  {
+    openBadgeSrc: "https://openbadgepassport.com/app/badge/info/982572/pic/embed", //Data Engineering Master
+  },
+  {
+    openBadgeSrc: "https://openbadgepassport.com/app/badge/info/982574/pic/embed", //Applications & Use Cases Master
+  },
+  {
+    openBadgeSrc: "https://openbadgepassport.com/app/badge/info/981288/pic/embed", //Machine Learning Professional
+  },
+  {
+    openBadgeSrc: "https://openbadgepassport.com/app/badge/info/981286/pic/embed", //Data Engineering Professional
+  },
+  // {
+  //   openBadgeSrc: "https://openbadgepassport.com/app/badge/info/981289/pic/embed", //Applications & Use Cases Professional
+  // },
 ];

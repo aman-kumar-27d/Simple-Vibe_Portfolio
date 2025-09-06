@@ -14,7 +14,7 @@ const Projects = lazy(() => import('./components/Projects').then(module => ({ de
 const Experience = lazy(() => import('./components/Experience').then(module => ({ default: module.Experience })));
 const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })));
 const Footer = lazy(() => import('./components/Footer').then(module => ({ default: module.Footer })));
-
+const Certifications = lazy(() => import('./components/Certifications').then(module => ({ default: module.default })));
 export const ThemeContext = React.createContext({
   theme: THEMES[0],
   setTheme: (_: Theme) => { },
@@ -66,9 +66,10 @@ const App: React.FC = () => {
           <Suspense fallback={<div className="text-center p-12">Loading...</div>}>
             <About />
             <WhatIDo />
-            <Skills />
             <Experience />
             <Projects />
+            <Skills />
+            <Certifications />
             <Contact />
           </Suspense>
         </main>
