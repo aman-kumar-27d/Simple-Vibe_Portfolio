@@ -1,19 +1,32 @@
 import { Project, Experience, Theme } from './types';
-import { NodeIcon, PythonIcon, ReactIcon, MongoIcon, DockerIcon, TypescriptIcon, NextJSIcon, JavaIcon, TensorFlowIcon, ScikitLearnIcon, AWSIcon, SQLIcon } from './components/icons';
+
+import {
+  FaPython,
+  FaReact,
+  FaDocker,
+  FaAws,
+} from 'react-icons/fa';
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiTensorflow,
+  SiScikitlearn,
+  SiMongodb,
+} from 'react-icons/si';
+import { DiDatabase } from 'react-icons/di';
+
 
 export const SKILLS = [
-  { name: 'Python', Icon: PythonIcon },
-  { name: 'Java', Icon: JavaIcon },
-  { name: 'TypeScript', Icon: TypescriptIcon },
-  { name: 'React', Icon: ReactIcon },
-  { name: 'Next.js', Icon: NextJSIcon },
-  { name: 'Node.js', Icon: NodeIcon },
-  { name: 'TensorFlow', Icon: TensorFlowIcon },
-  { name: 'Scikit-learn', Icon: ScikitLearnIcon },
-  { name: 'MongoDB', Icon: MongoIcon },
-  { name: 'SQL', Icon: SQLIcon },
-  { name: 'Docker', Icon: DockerIcon },
-  { name: 'AWS', Icon: AWSIcon },
+  { name: 'Python', Icon: FaPython },
+  { name: 'TypeScript', Icon: SiTypescript },
+  { name: 'React', Icon: FaReact },
+  { name: 'Next.js', Icon: SiNextdotjs },
+  { name: 'TensorFlow', Icon: SiTensorflow },
+  { name: 'Scikit-learn', Icon: SiScikitlearn },
+  { name: 'MongoDB', Icon: SiMongodb },
+  { name: 'SQL', Icon: DiDatabase },
+  { name: 'Docker', Icon: FaDocker },
+  { name: 'AWS', Icon: FaAws },
 ];
 
 export const services = [

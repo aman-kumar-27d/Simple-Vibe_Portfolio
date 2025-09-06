@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { PROJECTS } from '../constants';
 import { GithubIcon, ExternalLinkIcon } from './icons';
-// import { gsap } from 'gsap';
+
 
 export const Projects: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
